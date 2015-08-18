@@ -45,7 +45,7 @@ public class GeofenceCallback implements MqttCallback{
                geofenceInfo.setCurrentLat(latitude);
                boolean error =geofenceInfo.checkForPointOfNoReturn();
                if (error){
-                   new PublishThread(client,carID+"/message","You have left the permitted area. Please turn around.").start();
+                   new PublishThread(client,carID+"/message","message;messageText:You have left the permitted area. Please turn around.").start();
                }
            }
            else{
