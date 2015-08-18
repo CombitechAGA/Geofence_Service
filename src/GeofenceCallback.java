@@ -38,7 +38,7 @@ public class GeofenceCallback implements MqttCallback{
            if(clientToInfo.containsKey(carID)){
                double longitude = Double.parseDouble(message.split("longitude:")[1].split(";")[0]);
                System.out.println(longitude);
-               double latitude = Double.parseDouble(message.split("latitude:")[1]);
+               double latitude = Double.parseDouble(message.split("latitude:")[1].split(";")[0]);
                System.out.println(latitude);
                GeofenceInfo geofenceInfo = clientToInfo.get(carID);
                geofenceInfo.setCurrentLong(longitude);
