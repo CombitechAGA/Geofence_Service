@@ -13,7 +13,7 @@ public class Main {
         MqttClient client = null;
         MemoryPersistence persistence = new MemoryPersistence();
         try {
-            client = new MqttClient("tcp://mqtt.phelicks.net:1883", "PointOfNoReturnService", persistence);
+            client = new MqttClient("tcp://mqtt.phelicks.net:1883", "GeofenceService", persistence);
             MqttConnectOptions options = new MqttConnectOptions();
             options.setUserName("cab");
             options.setPassword("sjuttongubbar".toCharArray());
